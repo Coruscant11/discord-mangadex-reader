@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/APIException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/LocalizedString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Manga.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/MangaAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Relationship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/TagAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/VolumeAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/GETUrlBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaAggregateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRandomRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/SearchMangaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaAggregateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/commands/CommandsRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ButtonsNavigationListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/CommandsListenener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ListenersRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/SelectMenusChapterListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponseTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AcVypDM0Dc9fgoVgd8ZYAeWa5N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/jp/IdeaProjects/Murasaki",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.carlens.murasaki.back.api" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.carlens.murasaki.back.api.wrapper.responses" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MangaResponseTest">
+    <configuration name="fr.carlens.murasaki.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DISCORD_MURASAKI_TOKEN" value="OTg1OTAyNzE4ODcyODc1MDc5.G8LUHL.ZsawbiS973qdsWrjQRb071Q4QQ1SUFznV7gX3c" />
+        <env name="DISCORD_MURASAKI_GUILDID" value="680578254377451539" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.Main" />
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fr.carlens.murasaki.back.api.MangadexClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.back.api.MangadexClient" />
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.back.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MangaListResponseTest.testFromSwordMangaList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.back.api.wrapper.responses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses.MangaListResponseTest" />
+      <option name="METHOD_NAME" value="testFromSwordMangaList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MangaResponseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.back.api.wrapper.responses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses.MangaResponseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MangaResponseTest.testRandomMangaResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.back.api.wrapper.responses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.back.api.wrapper.responses.MangaResponseTest" />
+      <option name="METHOD_NAME" value="testRandomMangaResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.fr.carlens.murasaki.back.api.MangadexClient" />
+      <item itemvalue="Application.fr.carlens.murasaki.Main" />
+      <item itemvalue="JUnit.MangaListResponseTest.testFromSwordMangaList" />
+      <item itemvalue="JUnit.MangaResponseTest" />
+      <item itemvalue="JUnit.MangaResponseTest.testRandomMangaResponse" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MangaResponseTest" />
+        <item itemvalue="JUnit.MangaResponseTest.testRandomMangaResponse" />
+        <item itemvalue="JUnit.MangaListResponseTest.testFromSwordMangaList" />
+        <item itemvalue="Application.fr.carlens.murasaki.back.api.MangadexClient" />
+        <item itemvalue="Application.fr.carlens.murasaki.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="" />
+      <created>1655309118993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655309118993</updated>
+      <workItem from="1655309122948" duration="6538000" />
+      <workItem from="1655318882327" duration="8936000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponseTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
