@@ -1,5 +1,8 @@
 package fr.carlens.murasaki.back.api.wrapper.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Relationship {
 
     private String id;

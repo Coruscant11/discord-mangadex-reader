@@ -1,9 +1,11 @@
 package fr.carlens.murasaki.back.api.wrapper.responses;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import fr.carlens.murasaki.back.api.wrapper.models.Manga;
 
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MangaListResponse {
 
     private String result;

@@ -1,7 +1,10 @@
 package fr.carlens.murasaki.back.api.wrapper.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class VolumeAggregate {
     private String volume;
     private int count;

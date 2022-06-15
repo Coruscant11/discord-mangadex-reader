@@ -1,16 +1,11 @@
-package fr.carlens.murasaki.back.api.wrapper.responses;
+package fr.carlens.murasaki.back.api.wrapper.models;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import fr.carlens.murasaki.back.api.wrapper.models.Manga;
-
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class MangaResponse {
-
+public class ChapterResponse {
     private String result;
     private String response;
-    private Manga data;
+    private Chapter data;
 
-    public MangaResponse() {}
+    public ChapterResponse() {}
 
     public String getResult() {
         return result;
@@ -28,11 +23,11 @@ public class MangaResponse {
         this.response = response;
     }
 
-    public Manga getData() {
+    public Chapter getData() {
         return data;
     }
 
-    public void setData(Manga data) {
+    public void setData(Chapter data) {
         this.data = data;
     }
 }
