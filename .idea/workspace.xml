@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/APIException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterAggregate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/LocalizedString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Manga.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/MangaAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Relationship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/TagAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/VolumeAggregate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/GETUrlBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaAggregateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRandomRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/SearchMangaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaAggregateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/commands/CommandsRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ButtonsNavigationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/CommandsListenener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ListenersRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/SelectMenusChapterListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponseTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Basic MangadexWrapper" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,8 +165,16 @@
       <option name="presentableId" value="Default" />
       <updated>1655309118993</updated>
       <workItem from="1655309122948" duration="6538000" />
-      <workItem from="1655318882327" duration="8936000" />
+      <workItem from="1655318882327" duration="9378000" />
     </task>
+    <task id="LOCAL-00001" summary="Basic MangadexWrapper">
+      <created>1655327999950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655327999950</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,12 +191,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic MangadexWrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic MangadexWrapper" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponseTest.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
