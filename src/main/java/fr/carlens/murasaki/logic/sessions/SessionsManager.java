@@ -13,12 +13,17 @@ public class SessionsManager {
 
     public void newSession(SessionKey key, String mangaId, String language) {
         if (!sessions.containsKey(key)) {
-            sessions.putIfAbsent(key, new Session(key, mangaId, language));
+            sessions.put(key, new Session(key, mangaId, language));
         }
     }
 
     public Session getSession(SessionKey key) {
-        return sessions.get(key);
+        for (Session session : sessions.values()) {
+            if (session.getSessionKey().equals(key)) {
+                return session;
+            }
+        }
+        return null;
     }
 
     public int count() {

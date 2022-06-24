@@ -4,53 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Fixed empty arrays issue.&#10;Starting session manager.&#10;Client can download pages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/ChapterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/api/payloads/responses/ChapterResponseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" afterDir="false" />
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Add download currentVolumes title to session &#10;Add random manga first chapter test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/APIException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/APIException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/MangadexClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/MangadexEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/MangadexEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/Chapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterAtHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAtHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/ChapterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/ChapterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/LocalizedString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/LocalizedString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Manga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/Manga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/MangaAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/MangaAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Relationship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/Relationship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/TagAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/TagAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/models/VolumeAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/VolumeAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/ChapterAtHomeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/ChapterAtHomeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/GETUrlBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/GETUrlBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaAggregateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/MangaAggregateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRandomRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/MangaRandomRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/MangaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/MangaRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/requests/SearchMangaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/requests/SearchMangaRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/ChapterAtHomeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/ChapterAtHomeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaAggregateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaAggregateResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaListResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/back/sessions/SessionsManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/CommandsListenener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListenener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/ListenersRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/front/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/ChapterAtHomeResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/api/payloads/responses/ChapterAtHomeResponseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaAggregateResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaAggregateResponseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaListResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaListResponseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/back/api/wrapper/responses/MangaResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/api/payloads/responses/MangaResponseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListenener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +30,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,7 +65,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -117,66 +85,20 @@
       <recent name="fr.carlens.murasaki.back.api.wrapper.responses" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChapterResponseTest.testFirstChapterRandomManga">
-    <configuration name="ChapterAtHomeResponseTest.testAkameGaKillFirstChapter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DISCORD_MURASAKI_GUILDID" value="747540564135772221" />
+        <env name="DISCORD_MURASAKI_TOKEN" value="OTg1OTAyNzE4ODcyODc1MDc5.G8LUHL.ZsawbiS973qdsWrjQRb071Q4QQ1SUFznV7gX3c" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.Main" />
       <module name="Murasaki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.carlens.murasaki.logic.api.payloads.responses.*" />
+          <option name="PATTERN" value="fr.carlens.murasaki.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses" />
-      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses.ChapterAtHomeResponseTest" />
-      <option name="METHOD_NAME" value="testAkameGaKillFirstChapter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChapterResponseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Murasaki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.carlens.murasaki.logic.api.payloads.responses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses" />
-      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses.ChapterResponseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChapterResponseTest.testFirstChapterRandomManga" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Murasaki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.carlens.murasaki.logic.api.payloads.responses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses" />
-      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses.ChapterResponseTest" />
-      <option name="METHOD_NAME" value="testFirstChapterRandomManga" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MangaAggregateResponseTest.testMangaAggregateFromRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Murasaki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.carlens.murasaki.logic.api.payloads.responses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses" />
-      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.api.payloads.responses.MangaAggregateResponseTest" />
-      <option name="METHOD_NAME" value="testMangaAggregateFromRandom" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,20 +118,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SessionsManagerTest.testPreviousVolumeTo0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.logic.sessions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.sessions" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.sessions.SessionsManagerTest" />
+      <option name="METHOD_NAME" value="testPreviousVolumeTo0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SessionsManagerTest.testSetPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.logic.sessions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.sessions" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.sessions.SessionsManagerTest" />
+      <option name="METHOD_NAME" value="testSetPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SessionsManagerTest.testSetVolumes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Murasaki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.carlens.murasaki.logic.sessions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.carlens.murasaki.logic.sessions" />
+      <option name="MAIN_CLASS_NAME" value="fr.carlens.murasaki.logic.sessions.SessionsManagerTest" />
+      <option name="METHOD_NAME" value="testSetVolumes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.ChapterAtHomeResponseTest.testAkameGaKillFirstChapter" />
-      <item itemvalue="JUnit.ChapterResponseTest" />
-      <item itemvalue="JUnit.ChapterResponseTest.testFirstChapterRandomManga" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.SessionsManagerTest.testPreviousVolumeTo0" />
+      <item itemvalue="JUnit.SessionsManagerTest.testSetPage" />
+      <item itemvalue="JUnit.SessionsManagerTest.testSetVolumes" />
       <item itemvalue="JUnit.SessionsManagerTest" />
-      <item itemvalue="JUnit.MangaAggregateResponseTest.testMangaAggregateFromRandom" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChapterResponseTest.testFirstChapterRandomManga" />
-        <item itemvalue="JUnit.ChapterResponseTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SessionsManagerTest" />
-        <item itemvalue="JUnit.ChapterAtHomeResponseTest.testAkameGaKillFirstChapter" />
-        <item itemvalue="JUnit.MangaAggregateResponseTest.testMangaAggregateFromRandom" />
+        <item itemvalue="JUnit.SessionsManagerTest.testSetPage" />
+        <item itemvalue="JUnit.SessionsManagerTest.testSetVolumes" />
+        <item itemvalue="JUnit.SessionsManagerTest.testPreviousVolumeTo0" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +193,8 @@
       <updated>1655309118993</updated>
       <workItem from="1655309122948" duration="6538000" />
       <workItem from="1655318882327" duration="12530000" />
-      <workItem from="1656072261683" duration="14174000" />
+      <workItem from="1656072261683" duration="20627000" />
+      <workItem from="1656096913398" duration="9664000" />
     </task>
     <task id="LOCAL-00001" summary="Basic MangadexWrapper">
       <created>1655327999950</created>
@@ -246,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656084594322</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add download currentVolumes title to session &#10;Add random manga first chapter test">
+      <created>1656089875842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656089875842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,18 +244,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic MangadexWrapper" />
     <MESSAGE value="Fixed empty arrays issue.&#10;Starting session manager.&#10;Client can download pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed empty arrays issue.&#10;Starting session manager.&#10;Client can download pages" />
+    <MESSAGE value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/MangadexClient.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.String" memberName="value" />

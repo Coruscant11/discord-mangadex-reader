@@ -5,6 +5,7 @@ import org.javacord.api.entity.server.Server;
 import org.javacord.api.interaction.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class CommandsRegister {
 
@@ -15,19 +16,33 @@ public class CommandsRegister {
             return;
         }
 
-        Server server = optionalServer.get();
-        System.out.println(buildSearchMangaCommand().createForServer(server).join());
-        System.out.println("Commands registered.");
+        buildSearchMangaCommand().createForServer(optionalServer.get()).join();
+        System.out.println("Commands registered to ." + guildId);
     }
 
+    public static void deleteGlobalsCommands(DiscordApi api) {
+        List<SlashCommand> commands = api.getGlobalSlashCommands().join();
+        for (SlashCommand command : commands) {
+            System.out.println(command.getName());
+            command.deleteGlobal();
+        }
+    }
+
+    public static void deleteGuildCommands(DiscordApi api, Server server) {
+        List<SlashCommand> commands = api.getServerSlashCommands(server).join();
+        for (SlashCommand command : commands) {
+            System.out.println(command.getName());
+            command.deleteForServer(server);
+        }
+    }
     public static SlashCommandBuilder buildSearchMangaCommand() {
         return SlashCommand.with("search_manga", "Search a manga on Mangadex",
                 Arrays.asList(
                         SlashCommandOption.create(SlashCommandOptionType.STRING, "manga", "The manga title", true),
                         SlashCommandOption.createWithChoices(SlashCommandOptionType.STRING, "language", "Translation language", true,
                                 Arrays.asList(
-                                        SlashCommandOptionChoice.create("EN", "EN"),
-                                        SlashCommandOptionChoice.create("FR", "fr")))
+                                        SlashCommandOptionChoice.create("FR", "fr"),
+                                        SlashCommandOptionChoice.create("EN", "EN")))
                 ));
     }
 }
