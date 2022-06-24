@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Add download currentVolumes title to session &#10;Add random manga first chapter test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Lecteur fonctionnel">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListenener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +72,13 @@
       <recent name="fr.carlens.murasaki.logic.sessions" />
       <recent name="fr.carlens.murasaki.back.api.wrapper.responses" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=springio/gs-spring-boot-docker" />
+      <command value="mvn spring-boot:build-image" />
+      <command value="mvn compile com.google.cloud.tools:jib-maven-plugin:2.3.0:dockerBuild" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -194,7 +189,7 @@
       <workItem from="1655309122948" duration="6538000" />
       <workItem from="1655318882327" duration="12530000" />
       <workItem from="1656072261683" duration="20627000" />
-      <workItem from="1656096913398" duration="9664000" />
+      <workItem from="1656096913398" duration="10621000" />
     </task>
     <task id="LOCAL-00001" summary="Basic MangadexWrapper">
       <created>1655327999950</created>
@@ -224,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656089875842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lecteur fonctionnel">
+      <created>1656106702990</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656106702990</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +247,8 @@
     <MESSAGE value="Basic MangadexWrapper" />
     <MESSAGE value="Fixed empty arrays issue.&#10;Starting session manager.&#10;Client can download pages" />
     <MESSAGE value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
+    <MESSAGE value="Lecteur fonctionnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lecteur fonctionnel" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
