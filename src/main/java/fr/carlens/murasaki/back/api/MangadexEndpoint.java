@@ -5,7 +5,8 @@ import org.apache.http.client.utils.URIBuilder;
 public enum MangadexEndpoint {
     API("api.mangadex.org"),
     AUTH_LOGIN("auth/login"),
-    MANGA("manga");
+    MANGA("manga"),
+    AT_HOME("at-home/server");
 
     private String url;
 

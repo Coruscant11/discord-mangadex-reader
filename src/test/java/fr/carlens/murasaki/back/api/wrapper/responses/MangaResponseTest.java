@@ -16,13 +16,19 @@ class MangaResponseTest {
     void testRandomMangaResponse() throws URISyntaxException  {
         MangadexClient client = new MangadexClient();
         try {
-            Manga manga = client.getRandomManga();
+            MangaResponse mangar = client.getRandomManga();
 
-            assertNotNull(manga.getId());
-            assertNotNull(manga.getAttributes());
-            assertEquals("manga", manga.getType());
+            assertEquals("ok", mangar.getResult());
 
-            assertTrue(manga.getAttributes().getTitle().size() > 0);
+            if(mangar.getResult().equalsIgnoreCase("ok")) {
+                Manga manga = mangar.getData();
+
+                assertNotNull(manga.getId());
+                assertNotNull(manga.getAttributes());
+                assertEquals("manga", manga.getType());
+
+                assertTrue(manga.getAttributes().getTitle().size() > 0);
+            }
         } catch (Exception e) {
             fail(e);
         }

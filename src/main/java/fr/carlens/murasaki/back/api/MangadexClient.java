@@ -1,12 +1,11 @@
 package fr.carlens.murasaki.back.api;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.carlens.murasaki.back.api.wrapper.models.Manga;
 import fr.carlens.murasaki.back.api.wrapper.models.VolumeAggregate;
-import fr.carlens.murasaki.back.api.wrapper.requests.MangaAggregateRequest;
-import fr.carlens.murasaki.back.api.wrapper.requests.MangaRandomRequest;
-import fr.carlens.murasaki.back.api.wrapper.requests.MangaRequest;
-import fr.carlens.murasaki.back.api.wrapper.requests.SearchMangaRequest;
+import fr.carlens.murasaki.back.api.wrapper.requests.*;
+import fr.carlens.murasaki.back.api.wrapper.responses.ChapterAtHomeResponse;
 import fr.carlens.murasaki.back.api.wrapper.responses.MangaAggregateResponse;
 import fr.carlens.murasaki.back.api.wrapper.responses.MangaListResponse;
 import fr.carlens.murasaki.back.api.wrapper.responses.MangaResponse;
@@ -33,17 +32,15 @@ public class MangadexClient {
     public MangadexClient() {
         this.client = HttpClients.createDefault();
         this.om = new ObjectMapper();
+        this.om.enable(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT);
     }
 
-    public MangadexClient(String username, String password) {
-
-    }
+    public MangadexClient(String username, String password) {}
 
     private HttpResponse sendGetRequest(String url) throws IOException {
         HttpGet request = new HttpGet(url);
-        HttpResponse response = client.execute(request);
 
-        return response;
+        return client.execute(request);
     }
 
     public List<Manga> searchManga(SearchMangaRequest smr) throws APIException, IOException, URISyntaxException {
@@ -61,51 +58,54 @@ public class MangadexClient {
         throw new APIException(statusCode, bodyResponse);
     }
 
-    public Manga getManga(MangaRequest mr) throws APIException, IOException, URISyntaxException {
+    public MangaResponse getManga(MangaRequest mr) throws APIException, IOException, URISyntaxException {
         HttpResponse response = sendGetRequest(mr.buildUrl());
 
         String bodyResponse = EntityUtils.toString(response.getEntity());
         int statusCode = response.getStatusLine().getStatusCode();
 
         if (statusCode == 200) {
-            MangaResponse mangaResponse = om.readValue(bodyResponse, MangaResponse.class);
-            if (mangaResponse.getResult().equalsIgnoreCase("ok"))
-                return mangaResponse.getData();
+            return om.readValue(bodyResponse, MangaResponse.class);
         }
 
         throw new APIException(statusCode, bodyResponse);
     }
 
-    public Manga getRandomManga() throws APIException, IOException, URISyntaxException {
+    public MangaResponse getRandomManga() throws APIException, IOException, URISyntaxException {
         MangaRandomRequest mrr = new MangaRandomRequest();
-        System.out.println(mrr.buildUrl());
-
         HttpResponse response = sendGetRequest(mrr.buildUrl());
 
         String bodyResponse = EntityUtils.toString(response.getEntity());
         int statusCode = response.getStatusLine().getStatusCode();
 
         if (statusCode == 200) {
-            MangaResponse mangaResponse = om.readValue(bodyResponse, MangaResponse.class);
-            if (mangaResponse.getResult().equalsIgnoreCase("ok"))
-                return mangaResponse.getData();
+             return om.readValue(bodyResponse, MangaResponse.class);
         }
 
         throw new APIException(statusCode, bodyResponse);
     }
 
-    public Map<String, VolumeAggregate> getMangaAggregate(MangaAggregateRequest mar) throws APIException, IOException, URISyntaxException {
-        System.out.println(mar.buildUrl());
-
+    public MangaAggregateResponse getMangaAggregate(MangaAggregateRequest mar) throws APIException, IOException, URISyntaxException {
         HttpResponse response = sendGetRequest(mar.buildUrl());
 
         String bodyResponse = EntityUtils.toString(response.getEntity());
         int statusCode = response.getStatusLine().getStatusCode();
 
         if (statusCode == 200) {
-            MangaAggregateResponse mangaAggregateResponse = om.readValue(bodyResponse, MangaAggregateResponse.class);
-            if (mangaAggregateResponse.getResult().equalsIgnoreCase("ok"))
-                return mangaAggregateResponse.getVolumes();
+            return om.readValue(bodyResponse, MangaAggregateResponse.class);
+        }
+
+        throw new APIException(statusCode, bodyResponse);
+    }
+
+    public ChapterAtHomeResponse getChapterAtHome(ChapterAtHomeRequest cahr) throws APIException, IOException, URISyntaxException {
+        HttpResponse response = sendGetRequest(cahr.buildUrl());
+
+        String bodyResponse = EntityUtils.toString(response.getEntity());
+        int statusCode = response.getStatusLine().getStatusCode();
+
+        if (statusCode == 200) {
+            return om.readValue(bodyResponse, ChapterAtHomeResponse.class);
         }
 
         throw new APIException(statusCode, bodyResponse);

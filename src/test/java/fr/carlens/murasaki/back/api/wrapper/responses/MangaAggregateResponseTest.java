@@ -17,17 +17,33 @@ class MangaAggregateResponseTest {
     void testMangaAggregateFromRandom() {
         MangadexClient client = new MangadexClient();
         try {
-            MangaAggregateRequest mar = new MangaAggregateRequest("8946189d-682f-4838-9c2a-3c2dd5132f2c", "en");
-            Map<String, VolumeAggregate> volumes = client.getMangaAggregate(mar);
+            MangaResponse mangar = client.getRandomManga();
+
+            assertEquals("ok", mangar.getResult());
+            if(mangar.getResult().equalsIgnoreCase("ok")) {
+                Manga m = mangar.getData();
+                System.out.println("Random manga : " + m.getId());
+
+                MangaAggregateRequest mar = new MangaAggregateRequest(m.getId(), "en");
+                MangaAggregateResponse mangaar = client.getMangaAggregate(mar);
+                assertEquals("ok", mangaar.getResult());
+
+                if(mangaar.getResult().equalsIgnoreCase("ok") && mangaar.getVolumes() != null) {
+                    Map<String, VolumeAggregate> volumes = mangaar.getVolumes();
 
 
-            assertTrue(volumes.size() > 0);
+                    assertTrue(volumes.size() > 0);
 
-            VolumeAggregate firstVolume = volumes.values().iterator().next();
-            assertNotNull(firstVolume.getVolume());
-            assertTrue(firstVolume.getCount() > 0);
-            assertTrue(firstVolume.getChapters().size() > 0);
-            assertNotNull(firstVolume.getChapters().values().iterator().next().getId());
+                    VolumeAggregate firstVolume = volumes.values().iterator().next();
+                    assertNotNull(firstVolume.getVolume());
+                    assertTrue(firstVolume.getCount() > 0);
+                    assertTrue(firstVolume.getChapters().size() > 0);
+                    assertNotNull(firstVolume.getChapters().values().iterator().next().getId());
+                }
+                else {
+                    System.out.println("Volumes null.");
+                }
+            }
         } catch (Exception e) {
             fail(e);
         }
