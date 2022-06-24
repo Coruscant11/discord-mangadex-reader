@@ -1,6 +1,6 @@
 package fr.carlens.murasaki;
 
-import fr.carlens.murasaki.front.commands.CommandsRegister;
+import fr.carlens.murasaki.discord.commands.CommandsRegister;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 
