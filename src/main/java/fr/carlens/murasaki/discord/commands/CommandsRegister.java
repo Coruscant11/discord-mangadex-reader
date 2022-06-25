@@ -16,8 +16,10 @@ public class CommandsRegister {
             return;
         }
 
-        buildSearchMangaCommand().createForServer(optionalServer.get()).join();
-        System.out.println("Commands registered to ." + guildId);
+        buildSearchMangaCommand().createGlobal(api).join();
+        buildSetPageCommand().createGlobal(api).join();
+        buildSetVolumeCommand().createGlobal(api).join();
+        System.out.println("Commands registered.");
     }
 
     public static void deleteGlobalsCommands(DiscordApi api) {
@@ -43,6 +45,20 @@ public class CommandsRegister {
                                 Arrays.asList(
                                         SlashCommandOptionChoice.create("FR", "fr"),
                                         SlashCommandOptionChoice.create("EN", "EN")))
+                ));
+    }
+
+    public static SlashCommandBuilder buildSetPageCommand() {
+        return SlashCommand.with("set_page", "Set the current page",
+                Arrays.asList(
+                        SlashCommandOption.create(SlashCommandOptionType.DECIMAL, "page", "The page number", true)
+                ));
+    }
+
+    public static SlashCommandBuilder buildSetVolumeCommand() {
+        return SlashCommand.with("set_volume", "Set the current volume",
+                Arrays.asList(
+                        SlashCommandOption.create(SlashCommandOptionType.DECIMAL, "volume", "The volume number", true)
                 ));
     }
 }

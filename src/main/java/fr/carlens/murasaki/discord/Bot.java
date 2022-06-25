@@ -24,11 +24,11 @@ public class Bot {
                 .login()
                 .join();
 
-        System.out.println("Bot logged in. [" + api.getYourself().getMentionTag() + "]");
+        System.out.println("Bot logged in. [" + api.getYourself().getDiscriminatedName() + "]");
 
-        CommandsRegister.deleteGlobalsCommands(api);
-        CommandsRegister.deleteGuildCommands(api, api.getServerById(guildId).get());
-        CommandsRegister.registerCommands(api, guildId);
+//        CommandsRegister.deleteGlobalsCommands(api);
+//        CommandsRegister.deleteGuildCommands(api, api.getServerById(guildId).get());
+//        CommandsRegister.registerCommands(api, guildId);
         ListenersRegister.registerListeners(api);
     }
 }

@@ -76,8 +76,12 @@ public class Session {
 
     private String getChapterTitle(String mangaId) throws APIException, IOException, URISyntaxException {
         ChapterResponse c = client.getChapter(new ChapterRequest(mangaId));
-        String title = c.getData().getAttributes().getTitle();
-        return title == null || title.equals("") ? "No title" : title;
+        StringBuilder sb = new StringBuilder();
+        if (c.getData().getAttributes().getTitle() != null && !c.getData().getAttributes().getTitle().equals(""))
+            sb.append(c.getData().getAttributes().getTitle());
+        else
+            sb.append("No Title");
+        return sb.toString();
     }
 
     public List<String> getCurrentVolumeChapterIds() {
