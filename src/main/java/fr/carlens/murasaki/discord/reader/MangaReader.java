@@ -38,11 +38,7 @@ public class MangaReader {
 
     public void sendReader(Interaction interaction) {
         try {
-            interaction.createImmediateResponder()
-                    .addEmbed(buildPageEmbed())
-                    .addComponents(buildChapterChoiceMenu(), buildNavigationsButtons())
-                    .respond();
-
+            buildReader().send(interaction.getChannel().get());
             new MessageBuilder().addAttachment(new URL(SessionsManager.getInstance().getSession(key).showCurrentPage())).send(interaction.getChannel().get());
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +62,7 @@ public class MangaReader {
                 .setUrl(imageUrl)
                 .setTimestampToNow()
                 .setColor(Color.MAGENTA)
-                .setImage(imageUrl)
+//                .setImage(imageUrl)
                 .setFooter(String.format("Volume %d/%d", getSession().getCurrentVolumeIndex() + 1, getSession().volumesCount()));
     }
     private ActionRow buildChapterChoiceMenu() throws APIException, IOException, URISyntaxException {

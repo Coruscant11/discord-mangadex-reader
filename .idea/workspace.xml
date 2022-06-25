@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Add download currentVolumes title to session &#10;Add random manga first chapter test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListenener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ListenersRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/carlens/murasaki/logic/sessions/SessionsManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
