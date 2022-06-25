@@ -133,16 +133,19 @@ public class Session {
 
     public void nextChapter() {
         currentChapterIndex = currentChapterIndex + 1 < currentVolumeChaptersCount() ? currentChapterIndex + 1 : currentChapterIndex;
+        currentPage = 0;
     }
 
     public void setChapter(int newChapter) {
         currentChapterIndex = newChapter >= 0 && newChapter < currentVolumeChaptersCount() ? newChapter : currentChapterIndex;
+        currentPage = 0;
     }
 
     public void setChapterById(String chapterId) {
         for (ChapterAggregate ca : ChapterAggregate.sortChaptersList(getCurrentVolume().getChapters())) {
             if (ca.getId().equals(chapterId)) {
                 currentChapterIndex = ChapterAggregate.sortChaptersList(getCurrentVolume().getChapters()).indexOf(ca);
+                currentPage = 0;
                 return;
             }
         }
@@ -150,18 +153,23 @@ public class Session {
 
     public void previousChapter() {
         currentChapterIndex = currentChapterIndex - 1 < 0 ? currentChapterIndex : currentChapterIndex + 1;
+        currentPage = 0;
     }
 
     public void nextVolume() {
         currentVolumeIndex = currentVolumeIndex + 1 < volumesCount() ? currentVolumeIndex + 1 : currentVolumeIndex;
+        currentChapterIndex = 0;
+        currentPage = 0;
     }
 
     public void setVolume(int volume) {
         currentVolumeIndex = volume >= 0 && volume < volumesCount() ? volume : currentVolumeIndex;
+        currentPage = 0;
     }
 
     public void previousVolume() {
         currentVolumeIndex = currentVolumeIndex - 1 < 0 ? currentVolumeIndex : currentVolumeIndex - 1;
+        currentPage = 0;
     }
 
     public SessionKey getSessionKey() {

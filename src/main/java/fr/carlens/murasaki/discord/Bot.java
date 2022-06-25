@@ -26,7 +26,9 @@ public class Bot {
 
         System.out.println("Bot logged in. [" + api.getYourself().getMentionTag() + "]");
 
-        ListenersRegister.registerListeners(api);
+        CommandsRegister.deleteGlobalsCommands(api);
+        CommandsRegister.deleteGuildCommands(api, api.getServerById(guildId).get());
         CommandsRegister.registerCommands(api, guildId);
+        ListenersRegister.registerListeners(api);
     }
 }
