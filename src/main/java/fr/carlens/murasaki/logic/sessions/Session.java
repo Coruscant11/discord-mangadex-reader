@@ -11,10 +11,12 @@ import fr.carlens.murasaki.logic.api.payloads.requests.MangaAggregateRequest;
 import fr.carlens.murasaki.logic.api.payloads.responses.ChapterAtHomeResponse;
 import fr.carlens.murasaki.logic.api.payloads.responses.ChapterResponse;
 import fr.carlens.murasaki.logic.api.payloads.responses.MangaAggregateResponse;
+import org.javacord.api.entity.message.component.SelectMenuOption;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Session {
@@ -35,7 +37,8 @@ public class Session {
         this.mangaId = mangaId;
         this.language = language;
         loadVolumes();
-
+        var volume1 = ChapterAggregate.sortChaptersList(volumes.get(0).getChapters());
+        var volume2 = ChapterAggregate.sortChaptersList(volumes.get(1).getChapters());
         this.currentPage = 0;
         this.currentVolumeIndex = 0;
         this.currentChapterIndex = 0;
@@ -43,11 +46,50 @@ public class Session {
         client = new MangadexClient();
     }
 
+    private boolean hasTooBigVolumes(List<VolumeAggregate> volumes) {
+        for (VolumeAggregate volume : volumes) {
+            if (volume.getChapters().size() > 25) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void loadVolumes() {
         try {
             MangaAggregateResponse mar = new MangadexClient().getMangaAggregate(new MangaAggregateRequest(mangaId, language));
             this.volumes = VolumeAggregate.sortVolumesMap(mar.getVolumes());
+
+            int i = 0;
+            while(hasTooBigVolumes(volumes)) {
+                var volume = volumes.get(i);
+                var chapters = ChapterAggregate.sortChaptersList(volume.getChapters());
+                volume.setChapters(new HashMap<>());
+
+                if (chapters.size() > 25) {
+                    VolumeAggregate newVol = new VolumeAggregate();
+                    newVol.setChapters(new HashMap<>());
+
+                    List<ChapterAggregate> chaptersToRemove = new ArrayList<>();
+                    for (int x = 25; x < chapters.size(); x++)
+                        chaptersToRemove.add(chapters.get(x));
+
+                    for (ChapterAggregate ca : chaptersToRemove) {
+                        chapters.remove(ca);
+                        newVol.getChapters().put(ca.getChapter(), ca);
+                    }
+
+                    newVol.setVolume(volume.getVolume() + "(2)");
+                    newVol.setCount(newVol.getChapters().size());
+                    volumes.add(i+1, newVol);
+                }
+                for (ChapterAggregate c : chapters)
+                    volume.getChapters().put(c.getChapter(), c);
+                volume.setCount(volume.getChapters().size());
+                i++;
+            }
         } catch (Exception e) {
+            e.printStackTrace();
             this.volumes = null;
         }
     }
@@ -78,7 +120,10 @@ public class Session {
         ChapterResponse c = client.getChapter(new ChapterRequest(mangaId));
         StringBuilder sb = new StringBuilder();
         if (c.getData().getAttributes().getTitle() != null && !c.getData().getAttributes().getTitle().equals(""))
-            sb.append(c.getData().getAttributes().getTitle());
+            sb.append(c.getData().getAttributes().getTitle().length() > 25 ?
+                    c.getData().getAttributes().getTitle().substring(0, 25)
+                    :
+                    c.getData().getAttributes().getTitle());
         else
             sb.append("No Title");
         return sb.toString();
@@ -198,5 +243,9 @@ public class Session {
 
     public Integer getCurrentVolumeIndex() {
         return currentVolumeIndex;
+    }
+
+    public List<VolumeAggregate> getVolumes() {
+        return volumes;
     }
 }

@@ -1,6 +1,7 @@
 package fr.carlens.murasaki.discord.reader;
 
 import fr.carlens.murasaki.logic.api.APIException;
+import fr.carlens.murasaki.logic.api.models.VolumeAggregate;
 import fr.carlens.murasaki.logic.sessions.Session;
 import fr.carlens.murasaki.logic.sessions.SessionKey;
 import fr.carlens.murasaki.logic.sessions.SessionsManager;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MangaReader {
@@ -38,8 +40,13 @@ public class MangaReader {
 
     public void sendReader(Interaction interaction) {
         try {
-            buildReader().send(interaction.getChannel().get());
-            new MessageBuilder().addAttachment(new URL(SessionsManager.getInstance().getSession(key).showCurrentPage())).send(interaction.getChannel().get());
+            buildReader().send(interaction.getChannel().get()).exceptionally(e -> {
+                e.printStackTrace();
+                return null;
+            });
+            new MessageBuilder()
+                    .setContent(String.format("%d/%d", getSession().getCurrentPage() + 1, getSession().currentChapterPagesCount()))
+                    .addAttachment(new URL(SessionsManager.getInstance().getSession(key).showCurrentPage())).send(interaction.getChannel().get());
         } catch (Exception e) {
             e.printStackTrace();
             interaction.createImmediateResponder()
@@ -48,9 +55,10 @@ public class MangaReader {
         }
     }
     public MessageBuilder buildReader() throws APIException, IOException, URISyntaxException {
-        return new MessageBuilder()
+        var builder = new MessageBuilder()
                 .addEmbed(buildPageEmbed())
                 .addComponents(buildChapterChoiceMenu(), buildNavigationsButtons());
+        return builder;
     }
 
     private EmbedBuilder buildPageEmbed() throws APIException, IOException, URISyntaxException {
@@ -65,8 +73,21 @@ public class MangaReader {
 //                .setImage(imageUrl)
                 .setFooter(String.format("Volume %d/%d", getSession().getCurrentVolumeIndex() + 1, getSession().volumesCount()));
     }
+
+    private ActionRow buildVolumeChoiceMenu()  throws APIException, IOException, URISyntaxException {
+        return ActionRow.of(SelectMenu.create("volume_choice", "Choose a volume (shows 25 max)", 1, 1, buildVolumeOption()));
+    }
+
     private ActionRow buildChapterChoiceMenu() throws APIException, IOException, URISyntaxException {
         return ActionRow.of(SelectMenu.create("chapter_choice", "Choose a chapter", 1, 1, buildChapterOptions()));
+    }
+
+    private List<SelectMenuOption> buildVolumeOption() throws APIException, IOException, URISyntaxException {
+        List<SelectMenuOption> options = new ArrayList<>();
+        for (int i = 0; i < getSession().volumesCount(); i++) {
+            options.add(SelectMenuOption.create(getSession().getVolumes().get(i).getVolume(), String.valueOf(i)));
+        }
+        return options;
     }
 
     private List<SelectMenuOption> buildChapterOptions() throws APIException, IOException, URISyntaxException {

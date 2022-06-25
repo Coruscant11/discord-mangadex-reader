@@ -1,5 +1,7 @@
 package fr.carlens.murasaki.discord.listeners;
 
+import fr.carlens.murasaki.ConsoleColors;
+import fr.carlens.murasaki.discord.Bot;
 import fr.carlens.murasaki.discord.reader.MangaReader;
 import fr.carlens.murasaki.logic.sessions.Session;
 import fr.carlens.murasaki.logic.sessions.SessionKey;
@@ -9,11 +11,14 @@ import org.javacord.api.entity.user.User;
 import org.javacord.api.event.interaction.SelectMenuChooseEvent;
 import org.javacord.api.listener.interaction.SelectMenuChooseListener;
 
+import java.time.ZoneId;
+
 public class SelectMenusChapterListener implements SelectMenuChooseListener {
 
     @Override
     public void onSelectMenuChoose(SelectMenuChooseEvent selectMenuChooseEvent) {
         var interaction = selectMenuChooseEvent.getSelectMenuInteraction();
+        Bot.logInteraction(selectMenuChooseEvent.getInteraction(), interaction.getCustomId());
 
         TextChannel channel = interaction.getChannel().get();
         User user = interaction.getUser();

@@ -41,19 +41,19 @@ public class VolumeAggregate {
     public static List<VolumeAggregate> sortVolumesMap(Map<String, VolumeAggregate> volumes) {
         var list = new ArrayList<>(volumes.values().stream().toList());
         list.sort((v1, v2) -> {
-            int v1d, v2d;
+            double v1d, v2d;
             try {
-                v1d = v1.getVolume().equalsIgnoreCase("none") ? Integer.MAX_VALUE : Integer.parseInt(v1.getVolume());
+                v1d = v1.getVolume().equalsIgnoreCase("none") ? Double.MAX_VALUE : Double.parseDouble(v1.getVolume());
             } catch (NumberFormatException e) {
-                v1d = Integer.MAX_VALUE;
+                v1d = Double.MAX_VALUE;
             }
             try {
-                v2d = v2.getVolume().equalsIgnoreCase("none") ? Integer.MAX_VALUE : Integer.parseInt(v2.getVolume());
+                v2d = v2.getVolume().equalsIgnoreCase("none") ? Integer.MAX_VALUE : Double.parseDouble(v2.getVolume());
             } catch (NumberFormatException e) {
-                v2d = Integer.MAX_VALUE;
+                v2d = Double.MAX_VALUE;
             }
 
-            return v1d - v2d;
+            return Double.compare(v1d, v2d);
         });
 
         return list;

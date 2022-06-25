@@ -1,5 +1,6 @@
 package fr.carlens.murasaki.discord.listeners;
 
+import fr.carlens.murasaki.discord.Bot;
 import fr.carlens.murasaki.discord.reader.MangaReader;
 import fr.carlens.murasaki.logic.sessions.SessionKey;
 import fr.carlens.murasaki.logic.sessions.SessionsManager;
@@ -13,6 +14,7 @@ public class ButtonsNavigationListener implements ButtonClickListener {
     @Override
     public void onButtonClick(ButtonClickEvent buttonClickEvent) {
         var interaction = buttonClickEvent.getButtonInteraction();
+        Bot.logInteraction(buttonClickEvent.getInteraction(), interaction.getCustomId());
 
         var user = interaction.getUser();
         var channel = interaction.getChannel().get();

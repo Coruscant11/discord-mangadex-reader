@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="Add download currentVolumes title to session &#10;Add random manga first chapter test">
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="add set page and set volumes commands">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/ConsoleColors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAggregate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/MangaAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/MangaAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/VolumeAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/VolumeAggregate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +36,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="saveMaster" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -169,8 +177,8 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SessionsManagerTest" />
-        <item itemvalue="JUnit.SessionsManagerTest.testSetPage" />
         <item itemvalue="JUnit.SessionsManagerTest.testSetVolumes" />
+        <item itemvalue="JUnit.SessionsManagerTest.testSetPage" />
         <item itemvalue="JUnit.SessionsManagerTest.testPreviousVolumeTo0" />
       </list>
     </recent_temporary>
@@ -187,6 +195,7 @@
       <workItem from="1655318882327" duration="12530000" />
       <workItem from="1656072261683" duration="20627000" />
       <workItem from="1656096913398" duration="9664000" />
+      <workItem from="1656157425156" duration="10914000" />
     </task>
     <task id="LOCAL-00001" summary="Basic MangadexWrapper">
       <created>1655327999950</created>

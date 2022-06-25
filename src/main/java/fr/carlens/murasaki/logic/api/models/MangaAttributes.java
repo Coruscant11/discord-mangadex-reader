@@ -39,6 +39,18 @@ public class MangaAttributes {
         return title;
     }
 
+    public String getTitle(String language) {
+        if (title.containsKey(language)) {
+            return title.get(language);
+        } else {
+            if (title.containsKey("en")) {
+                return title.get("en");
+            } else {
+                return title.values().iterator().next();
+            }
+        }
+    }
+
     public void setTitle(Map<String, String> title) {
         this.title = title;
     }

@@ -1,5 +1,7 @@
 package fr.carlens.murasaki.discord.listeners;
 
+import fr.carlens.murasaki.ConsoleColors;
+import fr.carlens.murasaki.discord.Bot;
 import fr.carlens.murasaki.discord.reader.MangaReader;
 import fr.carlens.murasaki.logic.api.APIException;
 import fr.carlens.murasaki.logic.api.MangadexClient;
@@ -17,6 +19,7 @@ import org.javacord.api.listener.interaction.SlashCommandCreateListener;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,12 +31,13 @@ public class CommandsListener implements SlashCommandCreateListener {
         var interaction = e.getSlashCommandInteraction();
 
         if (interaction.getChannel().isEmpty()) return;
+        Bot.logInteraction(e.getInteraction(), interaction.getCommandName());
 
         SessionKey key = new SessionKey(interaction.getChannel().get().getId(), interaction.getUser().getId());
 
         switch (interaction.getCommandName()) {
 
-            case "search_manga" -> {
+            case "search" -> {
 
                 String mangaTitle = interaction.getArguments().get(0).getStringValue().orElse("");
                 String language = interaction.getArguments().get(1).getStringValue().orElse("");
@@ -45,12 +49,21 @@ public class CommandsListener implements SlashCommandCreateListener {
                     if(mangas.size() > 0) {
                         List<SelectMenuOption> options = new ArrayList<>();
                         for (Manga m : mangas)
-                            options.add(SelectMenuOption.create(m.getAttributes().getTitle().get(language), m.getId() + "##" + language));
+                            options.add(SelectMenuOption.create(
+                                    m.getAttributes().getTitle(language).length() > 25 ?
+                                            m.getAttributes().getTitle(language).substring(0, 25)
+                                            :
+                                            m.getAttributes().getTitle(language),
+                                    m.getId() + "##" + language));
+
 
                         interaction.createImmediateResponder()
                                 .setContent("Make your choice.")
                                 .addComponents(ActionRow.of(SelectMenu.create("search_manga", "Choose a manga", 1, 1, options)))
-                                .respond();
+                                .respond().exceptionally(e1 -> {
+                                    e1.printStackTrace();
+                                    return null;
+                                });
                     } else {
                         interaction.createImmediateResponder()
                                 .setContent("No manga found.")
@@ -64,7 +77,7 @@ public class CommandsListener implements SlashCommandCreateListener {
                 }
             }
 
-            case "set_page" -> {
+            case "page" -> {
                 Session session = SessionsManager.getInstance().getSession(key);
                 if (session != null) {
                     int page = interaction.getArguments().get(0).getDecimalValue().orElse(0.0).intValue() - 1;
@@ -90,7 +103,7 @@ public class CommandsListener implements SlashCommandCreateListener {
                 }
             }
 
-            case "set_volume" -> {
+            case "volume" -> {
                 Session session = SessionsManager.getInstance().getSession(key);
                 if (session != null) {
                     int volume = interaction.getArguments().get(0).getDecimalValue().orElse(0.0).intValue() - 1;
