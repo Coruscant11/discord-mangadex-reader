@@ -67,6 +67,8 @@ public class MangaReader {
         return new EmbedBuilder()
                 .setTitle(getSession().getCurrentChapter().getChapter() + " : " + getSession().getCurrentChapterTitle())
                 .setDescription(String.format("Page %d/%d", getSession().getCurrentPage() + 1, getSession().currentChapterPagesCount()))
+                .addField("/page (number)", "Command to precisely change page")
+                .addField("/volume (number)", "Command to precisely change change volume")
                 .setUrl(imageUrl)
                 .setTimestampToNow()
                 .setColor(Color.MAGENTA)
@@ -84,7 +86,7 @@ public class MangaReader {
 
     private List<SelectMenuOption> buildVolumeOption() throws APIException, IOException, URISyntaxException {
         List<SelectMenuOption> options = new ArrayList<>();
-        for (int i = 0; i < getSession().volumesCount(); i++) {
+        for (int i = 0; i < getSession().volumesCount() && i < 25; i++) {
             options.add(SelectMenuOption.create(getSession().getVolumes().get(i).getVolume(), String.valueOf(i)));
         }
         return options;
@@ -95,7 +97,7 @@ public class MangaReader {
         List<String> ids = getSession().getCurrentVolumeChapterIds();
         List<SelectMenuOption> options = new ArrayList<>();
 
-        for(int i = 0; i < titles.size(); i++)
+        for(int i = 0; i < titles.size() && i < 25; i++)
             options.add(SelectMenuOption.create(titles.get(i), ids.get(i)));
 
         return options;

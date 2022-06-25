@@ -38,10 +38,10 @@ public class CommandsListener implements SlashCommandCreateListener {
         switch (interaction.getCommandName()) {
 
             case "search" -> {
-
                 String mangaTitle = interaction.getArguments().get(0).getStringValue().orElse("");
                 String language = interaction.getArguments().get(1).getStringValue().orElse("");
                 language = language.toLowerCase();
+                interaction.createImmediateResponder().setContent(String.format("Searching \"%s\" in \"%s\"...", mangaTitle, language)).respond();
 
                 MangadexClient client = new MangadexClient();
                 try {

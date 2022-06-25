@@ -42,13 +42,10 @@ public class Bot {
                 + ConsoleColors.RESET + " -> "
                 + ConsoleColors.RED + interactionName
                 + ConsoleColors.RESET
-                + "]");
-
-        System.out.println("\tAuthor : " + ConsoleColors.GREEN + interaction.getUser().getDiscriminatedName() + ConsoleColors.RESET);
-
-        if (interaction.getChannel().isPresent() && interaction.getChannel().get().asServerTextChannel().isPresent())
-            System.out.println("\tChannel : " + ConsoleColors.YELLOW + interaction.getChannel().get().asServerTextChannel().get().getName() + ConsoleColors.RESET);
-
-        System.out.println("\tTime : " + interaction.getCreationTimestamp().atZone(ZoneId.systemDefault()));
+                + "]"
+                + "\n\tAuthor : " + ConsoleColors.GREEN + interaction.getUser().getDiscriminatedName() + ConsoleColors.RESET
+                + (interaction.getChannel().isPresent() && interaction.getChannel().get().asServerTextChannel().isPresent() ?
+                    "\n\tChannel : " + ConsoleColors.YELLOW + interaction.getChannel().get().asServerTextChannel().get().getName() + ConsoleColors.RESET : "")
+                + "\n\tTime : " + interaction.getCreationTimestamp().atZone(ZoneId.systemDefault()));
     }
 }
