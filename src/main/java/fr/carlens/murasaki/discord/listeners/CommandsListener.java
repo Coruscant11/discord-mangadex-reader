@@ -57,13 +57,14 @@ public class CommandsListener implements SlashCommandCreateListener {
                                     m.getId() + "##" + language));
 
 
-                        interaction.createImmediateResponder()
+                        new MessageBuilder()
                                 .setContent("Make your choice.")
                                 .addComponents(ActionRow.of(SelectMenu.create("search_manga", "Choose a manga", 1, 1, options)))
-                                .respond().exceptionally(e1 -> {
+                                .send(interaction.getChannel().get()).exceptionally(e1 -> {
                                     e1.printStackTrace();
                                     return null;
                                 });
+
                     } else {
                         interaction.createImmediateResponder()
                                 .setContent("No manga found.")
