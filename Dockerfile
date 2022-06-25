@@ -4,6 +4,6 @@ MAINTAINER murasaki
 WORKDIR /murasaki
 COPY . .
 
-RUN mvn clean install
+RUN mvn clean package -DskipTests
 
 ENTRYPOINT ["java", "-jar", "target/Murasaki-1.0-SNAPSHOT.jar"]

@@ -20,9 +20,20 @@ public class ButtonsNavigationListener implements ButtonClickListener {
         var channel = interaction.getChannel().get();
         SessionKey key = new SessionKey(channel.getId(), user.getId());
 
+        String[] idsplit = interaction.getCustomId().split("##");
+        String buttonId = idsplit[0];
+        String buttonUserId  = "";
+        if(idsplit.length > 1)
+            buttonUserId = idsplit[1];
+        if (buttonId.equalsIgnoreCase("delete_session") && buttonUserId.equalsIgnoreCase(String.valueOf(user.getId()))) {
+            SessionsManager.getInstance().removeSession(key);
+            interaction.getMessage().delete();
+            return;
+        }
+
         if (SessionsManager.getInstance().getSession(key) != null) {
 
-            switch (interaction.getCustomId()) {
+            switch (buttonId) {
                 case "button_previous_volume" -> SessionsManager.getInstance().getSession(key).previousVolume();
                 case "button_next_volume" -> SessionsManager.getInstance().getSession(key).nextVolume();
                 case "button_previous_page" -> SessionsManager.getInstance().getSession(key).previousPage();

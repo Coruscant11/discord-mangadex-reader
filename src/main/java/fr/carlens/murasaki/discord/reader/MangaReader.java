@@ -57,7 +57,7 @@ public class MangaReader {
     public MessageBuilder buildReader() throws APIException, IOException, URISyntaxException {
         var builder = new MessageBuilder()
                 .addEmbed(buildPageEmbed())
-                .addComponents(buildChapterChoiceMenu(), buildNavigationsButtons());
+                .addComponents(buildVolumeChoiceMenu(), buildChapterChoiceMenu(), buildNavigationsButtons());
         return builder;
     }
 
@@ -108,11 +108,12 @@ public class MangaReader {
         boolean validNextPage = getSession().currentChapterPagesCount() > 1 && getSession().getCurrentPage() + 1 < getSession().currentChapterPagesCount();
 
         return ActionRow.of(
-                Button.secondary("button_previous_volume", "Previous volume", !validPreviousVolume),
-                Button.primary("button_previous_page", "Previous page", "⬅", !validPreviousPage),
-                Button.primary("button_next_page", "Next page", "➡", !validNextPage),
-                Button.secondary("button_next_volume", "Next volume", !validNextVolume),
-                Button.danger("page_problem", "Send page again")
+                //Button.secondary("button_previous_volume##" + key.userId", "Previous volume", !validPreviousVolume),
+                Button.primary("button_previous_page##\" + key.userId", "️", "⬅", !validPreviousPage),
+                Button.primary("button_next_page##\" + key.userId", "", "➡", !validNextPage),
+                //Button.secondary("button_next_volume##" + key.userId", "Next volume", !validNextVolume),
+                Button.danger("page_problem##\" + key.userId", "", "🔁"),
+                Button.danger("delete_session##" + key.userId, "", "🗑")
         );
     }
 }

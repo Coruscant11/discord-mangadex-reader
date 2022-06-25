@@ -26,6 +26,13 @@ public class SessionsManager {
         return null;
     }
 
+    public void removeSession(SessionKey key) {
+        for (Session session : sessions.values()) {
+            if (session.getSessionKey().equals(key)) {
+                sessions.remove(session.getSessionKey());
+            }
+        }
+    }
     public int count() {
         return sessions.size();
     }

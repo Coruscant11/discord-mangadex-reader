@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="add set page and set volumes commands">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/ConsoleColors.java" afterDir="false" />
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;now need to dockerize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/commands/CommandsRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/ButtonsNavigationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/CommandsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/listeners/SelectMenusChapterListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/discord/reader/MangaReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/ChapterAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/MangaAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/MangaAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/VolumeAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/api/models/VolumeAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/carlens/murasaki/logic/sessions/SessionsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +188,7 @@
       <workItem from="1655318882327" duration="12530000" />
       <workItem from="1656072261683" duration="20627000" />
       <workItem from="1656096913398" duration="9664000" />
-      <workItem from="1656157425156" duration="10914000" />
+      <workItem from="1656157425156" duration="12596000" />
     </task>
     <task id="LOCAL-00001" summary="Basic MangadexWrapper">
       <created>1655327999950</created>
@@ -225,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656089875842</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;now need to dockerize">
+      <created>1656171466985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656171466985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +258,8 @@
     <MESSAGE value="Basic MangadexWrapper" />
     <MESSAGE value="Fixed empty arrays issue.&#10;Starting session manager.&#10;Client can download pages" />
     <MESSAGE value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
+    <MESSAGE value="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;now need to dockerize" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;now need to dockerize" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -48,6 +48,20 @@ public class SelectMenusChapterListener implements SelectMenuChooseListener {
                             .respond();
                 }
             }
+            case "volume_choice" -> {
+                if (SessionsManager.getInstance().getSession(key) != null) {
+                    Session session = SessionsManager.getInstance().getSession(key);
+                    session.setVolume(Integer.parseInt(interaction.getChosenOptions().get(0).getValue()));
+
+                    MangaReader reader = new MangaReader(key);
+                    reader.sendReader(selectMenuChooseEvent.getInteraction());
+                    interaction.getMessage().delete();
+                } else {
+                    interaction.createImmediateResponder()
+                            .setContent("You are not allowed to use this reader.")
+                            .respond();
+                }
+            }
         }
     }
 }
