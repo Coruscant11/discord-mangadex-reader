@@ -5,7 +5,7 @@ COPY . .
 RUN mvn dependency:go-offline -B
 RUN mvn clean package -DskipTests
 
-FROM openjdk:18-jre-alpine
+FROM openjdk:19-alpine
 
 WORKDIR /murasaki
 COPY --from=maven target/Murasaki-*.jar ./
