@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;add volumes menu&#10;add delete button&#10;now need to dockerize">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="998304e6-780f-42bd-ab01-f49bc7612cba" name="Changes" comment="maven jar plugin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +182,7 @@
       <workItem from="1655318882327" duration="12530000" />
       <workItem from="1656072261683" duration="20627000" />
       <workItem from="1656096913398" duration="9664000" />
-      <workItem from="1656157425156" duration="13162000" />
+      <workItem from="1656157425156" duration="13913000" />
     </task>
     <task id="LOCAL-00001" summary="Basic MangadexWrapper">
       <created>1655327999950</created>
@@ -228,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656173134421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="maven jar plugin">
+      <created>1656173690895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656173690895</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +268,8 @@
     <MESSAGE value="Add download currentVolumes title to session &#10;Add random manga first chapter test" />
     <MESSAGE value="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;now need to dockerize" />
     <MESSAGE value="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;add volumes menu&#10;add delete button&#10;now need to dockerize" />
-    <option name="LAST_COMMIT_MESSAGE" value="stable reader&#10;put 25 chapters per volume, add volumes if needed&#10;french works&#10;add volumes menu&#10;add delete button&#10;now need to dockerize" />
+    <MESSAGE value="maven jar plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven jar plugin" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
